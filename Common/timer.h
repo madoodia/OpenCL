@@ -1,3 +1,8 @@
+/* --------------------- */
+/* (C) 2020 madoodia.com */
+/* All Rights Reserved.  */
+/* --------------------- */
+
 #ifndef MYTIMER_H
 #define MYTIMER_H
 
@@ -18,7 +23,7 @@ struct Timer
   ~Timer()
   {
     endResult = result();
-    std::cout << endResult << "ms\n";
+    std::cout << endResult << " ms\n";
   }
 
   double result()

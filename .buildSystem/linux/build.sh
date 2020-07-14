@@ -49,4 +49,5 @@ if [ "$FOLDER" != "." ]; then
     cp $TARGET_NAME $ROOT/$FOLDER
 fi
 # --------------------------- #
-$ROOT/$FOLDER/$TARGET_NAME
+cd $ROOT/$FOLDER
+./$TARGET_NAME
