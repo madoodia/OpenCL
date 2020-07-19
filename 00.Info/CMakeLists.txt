@@ -11,11 +11,11 @@ SET(CMAKE_CXX_STANDARD 11)
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SOURCES
-    main.cpp
+    info.cpp
 )
 
 
-include_directories(../../Common)
+include_directories(../Common)
 
 add_executable($ENV{TARGET_NAME} ${SOURCES})
 
