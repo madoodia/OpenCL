@@ -9,7 +9,10 @@
  *
  */
 
-__kernel void DotProduct(__global float *a, __global float *b, __global float *c, int iNumElements)
+__kernel void DotProduct(__global float *a,
+                         __global float *b,
+                         __global float *c,
+                         unsigned int iNumElements)
 {
   // find position in global arrays
   int iGID = get_global_id(0);

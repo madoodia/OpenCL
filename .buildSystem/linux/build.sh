@@ -8,10 +8,10 @@ FOLDER=$2
 export FILE_NAME=$3
 export TARGET_NAME=$(basename $FOLDER)
 # --------------------------- #
-echo $ROOT
-echo $FOLDER
-echo $FILE_NAME
-echo $TARGET_NAME
+# echo $ROOT
+# echo $FOLDER
+# echo $FILE_NAME
+# echo $TARGET_NAME
 # ------= Include Envs =----- #
 LINUX_DIR=$(dirname "$0")
 . $LINUX_DIR/envVars.sh

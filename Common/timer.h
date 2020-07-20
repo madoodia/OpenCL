@@ -12,7 +12,7 @@
 struct Timer
 {
   std::chrono::steady_clock::time_point start, end;
-  std::chrono::duration<float> duration = {};
+  std::chrono::duration<double> duration = {};
   double endResult = 0.0;
 
   Timer()
@@ -29,7 +29,7 @@ struct Timer
   double result()
   {
     end = std::chrono::steady_clock::now();
-    duration = end - start;
+    duration = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
 
     endResult = (double)duration.count() * (double)1000.0f;
     return endResult;
