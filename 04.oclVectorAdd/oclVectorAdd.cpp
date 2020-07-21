@@ -63,10 +63,10 @@ int main()
 
     cl::CommandQueue queue(context);
 
-    auto dotProduct = cl::make_kernel<cl::Buffer,
-                                      cl::Buffer,
-                                      cl::Buffer,
-                                      uint>(program, "VectorAdd");
+    auto vectorAdd = cl::make_kernel<cl::Buffer,
+                                     cl::Buffer,
+                                     cl::Buffer,
+                                     uint>(program, "VectorAdd");
 
     std::cout << "Buffers ran in: ";
     {
@@ -78,7 +78,7 @@ int main()
     std::cout << "The kernel ran in: ";
     {
       Timer timer;
-      dotProduct(
+      vectorAdd(
           cl::EnqueueArgs(
               queue,
               cl::NDRange(iNumElements)),
@@ -103,7 +103,7 @@ int main()
     // Print the end result
     // for (int i = 0; i < golden.size(); ++i)
     // {
-    //   std::cout << "dot[" << i << "]: " << golden[i] << std::endl;
+    //   std::cout << "vectorAdd[" << i << "]: " << golden[i] << std::endl;
     // }
   }
   catch (cl::Error err)
