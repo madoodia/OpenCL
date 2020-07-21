@@ -144,6 +144,6 @@ void VectorAddHost(std::vector<float> pfData1,
   int i, j, k;
   for (i = 0, j = 0; i < pfResult.size(); i++)
   {
-    pfResult[i] += pfData1[j] * pfData2[j];
+    pfResult[i] = pfData1[j] + pfData2[j];
   }
 }
